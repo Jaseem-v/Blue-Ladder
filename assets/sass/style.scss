@@ -143,10 +143,7 @@
     // padding: 28rem 0 20rem;
 
     @media only screen and (max-width: $bp-xsmall) {
-      height: auto;
-      // padding: 12rem 3rem;
-      text-align: center;
-      align-items: center;
+      padding: 3rem;
     }
   }
 
@@ -195,7 +192,7 @@
     z-index: 1;
 
     @media only screen and (max-width: $bp-xsmall) {
-      font-size: 3.6rem;
+      font-size: 5rem;
     }
   }
 
