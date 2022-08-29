@@ -112,6 +112,8 @@ html {
   display: inline-block;
   text-align: center;
   overflow: hidden;
+  border: 1px solid $color-primary;
+
 
   span {
     position: absolute;
@@ -123,6 +125,8 @@ html {
     z-index: -1;
     border: none;
   }
+
+
 
   &__line {
     color: $color-primary;
@@ -190,6 +194,12 @@ html {
   &--about {
     padding: 1.2rem 2.6rem;
     margin-top: 1rem;
+  }
+
+  &--outline {
+    border: 1px solid $color-primary;
+    background: transparent;
+    color: $color-primary;
   }
 
   @media only screen and (max-width: $bp-992) {
@@ -612,6 +622,6 @@ html {
   }
 }
 
-.row{
+.row {
   row-gap: 2rem !important;
 }
