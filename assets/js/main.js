@@ -67,47 +67,6 @@ $(window).on('scroll', function () {
 
 });
 
-////////////////////////////////////////////////////
-// portofolio-filter
-
-const menuButtons = document.querySelector(".menu_filter_buttons");
-const menuBtn = document.querySelectorAll(".menu_filter_buttons-item")
-if (menuButtons) {
-    menuButtons.addEventListener("click", (e) => {
-        if (!e.target.classList.contains("menu_filter_buttons-item")) return;
-
-        if (menuBtn)
-            menuBtn.forEach(el => el.classList.remove("active"))
-        e.target.classList.add("active")
-
-        let selector = e.target.dataset.filter
-
-        $(".menu__items .row").isotope({
-            filter: `${selector == "all" ? "*" : `.${selector}`}`
-        });
-
-    })
-}
-
-
-const galleryButtons = document.querySelector(".gallery__buttons");
-const galleryBtn = document.querySelectorAll(".gallery__buttons-item")
-if (galleryButtons) {
-    galleryButtons.addEventListener("click", (e) => {
-        if (!e.target.classList.contains("gallery__buttons-item")) return;
-
-        if (galleryBtn)
-            galleryBtn.forEach(el => el.classList.remove("active"))
-        e.target.classList.add("active")
-
-        let selector = e.target.dataset.filter
-
-        $(".gallery__items .row").isotope({
-            filter: `${selector == "all" ? "*" : `.${selector}`}`
-        });
-
-    })
-}
 
 ///////////////////////////////
 
