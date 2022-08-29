@@ -800,10 +800,9 @@
     border-radius: 1.8rem;
     padding-left: 8rem;
 
-    @media only screen and (max-width: $bp-340) {
+    @media only screen and (max-width: $bp-xsmall) {
       flex-direction: column;
       padding: 2rem;
-
     }
 
 
