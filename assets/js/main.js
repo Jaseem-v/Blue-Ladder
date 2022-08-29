@@ -1,6 +1,6 @@
 var swiper = new Swiper(".services__swiper", {
     slidesPerView: 1,
-    spaceBetween: 60,
+    spaceBetween: 80,
     pagination: {
         el: ".service__slid-count",
         type: "fraction",
@@ -9,10 +9,10 @@ var swiper = new Swiper(".services__swiper", {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
     },
-    autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-    },
+    // autoplay: {
+    //     delay: 2500,
+    //     disableOnInteraction: false,
+    // },
     loop: true,
 });
 
