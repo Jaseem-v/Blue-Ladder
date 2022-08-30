@@ -163,7 +163,7 @@ $(document).ready(function () {
 $('.menu__img-box').magnificPopup({
     type: 'image',
     gallery: {
-        enabled: true
+        enabled: false
     }
 })
 
