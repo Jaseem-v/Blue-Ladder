@@ -567,7 +567,9 @@
     &:hover {
       .menu {
         &__img-box {
-          .menu__img {
+
+          .menu__img,
+          img {
             transform: scale(1.2);
           }
         }
@@ -587,6 +589,11 @@
       background-position: center;
       background-repeat: no-repeat;
 
+    }
+
+    img {
+      border-radius: 0px;
+      transition: all 0.7s;
     }
   }
 
