@@ -376,6 +376,10 @@
     border-radius: 0px;
   }
 
+  &__img-box {
+    min-height: 30rem;
+  }
+
   &__info {
     padding: 3rem 1.5rem;
     position: absolute;
@@ -547,8 +551,14 @@
   }
 
   &__single-item {
-    padding: 0rem 2rem;
+    // padding: 0rem 2rem;
     height: 100%;
+    padding-right: 3rem;
+
+    &--3 {
+      padding-right: 0rem;
+    }
+
   }
 
   &__item {
@@ -563,7 +573,7 @@
     &:hover {
       .menu {
         &__img-box {
-          img {
+          .menu__img {
             transform: scale(1.2);
           }
         }
@@ -573,12 +583,15 @@
 
   &__img-box {
     overflow: hidden;
-    min-height: 30rem;
+    // min-height: 30rem;
 
-    img {
+    .menu__img {
       border-radius: 0px;
       transition: all 0.7s;
       height: 30rem;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
 
     }
   }
@@ -679,6 +692,10 @@
       &__designation {
         color: $color-primary;
         font-size: 1.7rem;
+      }
+
+      &__img-box {
+        min-height: auto;
       }
     }
   }
