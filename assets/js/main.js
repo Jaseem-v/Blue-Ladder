@@ -167,16 +167,38 @@ $('.menu__img-box').magnificPopup({
     }
 })
 
-// //////////////////////////
-// // project
+const contactForm = document.querySelector("#contact-form");
+if (contactForm) {
+    $("#contact-form").submit((e) => {
+        e.preventDefault()
+        console.log();
+        $.ajax({
+            url: $("#contact-form").attr('action'),
+            crossDomain: true,
+            data: $("#contact-form").serialize(),
+            method: "POST",
+            type: 'json',
+            beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
+                $('#form-btn').addClass('d-none')
+                $('.loaderr').removeClass('d-none')
 
-// const projectBtn = document.querySelectorAll(".projects__single-item")
+            },
+            success: function (response) {
 
-// projectBtn.forEach((btn) => {
-//     btn.addEventListener("click", (el) => {
-//         let projectInfo = el.target.closest(".projects__outer");
+                swal("Form Submitted Successfuly", "", "success");
+                $("#contact-form")[0].reset()
 
-//         console.log(projectInfo.style);
-//         projectInfo.style.bottom = "-6rem"
-//     })
-// })
+                //window.location.href="https://google.com"
+            },
+            error: function (err) {
+                alert("Something Error")
+
+            },
+            complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+                $('#form-btn').removeClass('d-none')
+                $('.loaderr').addClass('d-none')
+            },
+        })
+    })
+
+}
