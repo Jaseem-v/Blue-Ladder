@@ -553,12 +553,6 @@
   &__single-item {
     // padding: 0rem 2rem;
     height: 100%;
-    padding-right: 3rem;
-
-    &--3 {
-      padding-right: 0rem;
-    }
-
   }
 
   &__item {
@@ -696,6 +690,19 @@
 
       &__img-box {
         min-height: auto;
+      }
+
+      &__single-item {
+        padding-right: 3rem;
+
+        &--3 {
+          padding-right: 0rem;
+        }
+
+        @media only screen and (max-width: $bp-xsmall) {
+          padding-right: 0rem;
+        }
+
       }
     }
   }
@@ -874,6 +881,8 @@
 
     @media only screen and (max-width: $bp-xsmall) {
       margin-top: 3rem;
+      height: auto;
+
     }
 
     &-items {}
