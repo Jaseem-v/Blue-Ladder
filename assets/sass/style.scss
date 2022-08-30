@@ -838,6 +838,11 @@
       background: #fff;
       transform: translate(-30%, -30%);
       width: 8rem;
+
+      @media only screen and (max-width: $bp-xsmall) {
+        transform: translate(-11%, -22%);
+        padding-right: 2rem;
+      }
     }
   }
 
